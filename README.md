@@ -19,4 +19,6 @@ To use the ChessEngine, clone this repository and ensure you have Python 3 insta
 ```bash
 git clone https://github.com/thesourabhk/ChessEngine.git
 cd ChessEngine
+pip install -r requirements.txt
+python ChessMain.py
 ```
