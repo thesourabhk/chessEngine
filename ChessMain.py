@@ -1,4 +1,3 @@
-
 """
 This is our main driver file, It will be responsible for handling user input and displaying the current GameState object.
 """
@@ -86,7 +85,9 @@ def main():
 
         #Ai Move finder
         if not gameOver and not humanTurn:
-            AIMove = SmartMoveFinder.findRandomMove(validMoves)
+            AIMove = SmartMoveFinder.findBestMove(gs,validMoves)
+            if AIMove is None:
+                AIMove = SmartMoveFinder.findRandomMove(validMoves)
             gs.makeMove(AIMove)
             moveMade = True
             animate = True
